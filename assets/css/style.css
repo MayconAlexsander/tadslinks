@@ -20,10 +20,10 @@
     --bg-color: #09091E;   /* Default: #09091E */
     --text-color: #ECF0F1; /* Default: #ECF0F1 */
 
-    --bubble-1-color: #4FC3DC;        /* Default: #4FC3DC / #F25D30 */
-    --bubble-1-color-aura: #4FC3DC44; /* Default: #4FC3DC44 / #F25D3044 */
-    --bubble-2-color: #FF2D75;        /* Default: #FF2D75 / #48C1F7 */
-    --bubble-2-color-aura: #FF2D7544; /* Default: #FF2D7544 / #48C1F744 */
+    --bubble-1-color: #383982;        /* Default: #4FC3DC / #F25D30 */
+    --bubble-1-color-aura: #38398244; /* Default: #4FC3DC44 / #F25D3044 */
+    --bubble-2-color: #878787;        /* Default: #FF2D75 / #48C1F7 */
+    --bubble-2-color-aura: #87878744; /* Default: #FF2D7544 / #48C1F744 */
 }
 
 body {
@@ -99,7 +99,7 @@ header, footer {
 
 /* ===== CONTAINER =============== */
 .container {
-    width: 30rem;
+    width: 60rem;
     margin: auto;
     padding-block: 4rem;
     text-align: center;
@@ -145,6 +145,12 @@ header p svg {
 
 /* ===== MAIN =============== */
 main {
+    /* border: 1px solid yellow; */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.4rem;
     font-size: 1.6rem;
     font-weight: 700;
 }
@@ -153,6 +159,14 @@ main ul {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+}
+
+main ul.outros {
+    flex-direction: row;
+}
+
+main .ico-download {
+    width: 1.8rem;
 }
 
 main svg {
@@ -177,12 +191,15 @@ main a:visited{
 }
 
 main ul li a {
+    min-width: 22rem;
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
 
-    padding: 1.6rem;
+    padding-block: 1.6rem;
+    padding-inline: 2.4rem;
 
     border-radius: 999px;
 
