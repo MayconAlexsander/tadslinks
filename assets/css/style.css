@@ -155,6 +155,10 @@ main {
     font-weight: 700;
 }
 
+main .divider {
+    display: none;
+}
+
 main ul {
     display: flex;
     flex-direction: column;
@@ -257,5 +261,9 @@ footer p svg path {
     main {
         flex-direction: column;
         align-items: center;
+    }
+
+    main .divider {
+        display: initial;
     }
 }
