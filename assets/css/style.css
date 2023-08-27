@@ -95,6 +95,14 @@ header, footer {
     }
 }
 
+@keyframes brilho {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+}
 
 
 /* ===== CONTAINER =============== */
@@ -212,6 +220,24 @@ main ul li a {
 
     transition: box-shadow 0.25s;
     transition: transform 0.25s;
+}
+
+main .wpp-calouros a {
+    background: linear-gradient(45deg, #ffd700, #b8860b);
+    position: relative;
+    overflow: hidden;
+}
+
+main .wpp-calouros a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+    top: 0;
+    left: -100%;
+    transform: skewX(-45deg);
+    animation: brilho 2s infinite linear;
 }
 
 
